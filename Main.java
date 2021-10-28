@@ -1,13 +1,14 @@
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Random;
 
 public class Main {
     public static void main(String[] args) throws IOException {
         BTree testTree = new BTree(10);
         //testTree.restore();
-        Random rand = new Random();
 
+
+
+        Random rand = new Random();
         String[] testData = new String[] {"one", "two", "three", "four", "five"
                 , "six", "seven", "eight", "nine", "ten"
                 , "eleven", "twelve", "thirteen", "fourteen", "fifteen"
@@ -15,6 +16,7 @@ public class Main {
         for (String s : testData) {
             testTree.insert(rand.nextInt(10000), s);
         }
+
 
         testTree.insert(5, "test1");
         testTree.insert(15, "test2");
@@ -31,6 +33,7 @@ public class Main {
         testTree.insert(5505, "test13");
         testTree.insert(6005, "test14");
         testTree.insert(6505, "test15");
+
 
         testTree.traverse();
 
@@ -51,9 +54,13 @@ public class Main {
         testTree.search(6505);
 
 
+
+        /*
         testTree.delete(5);
         testTree.delete(1505);
         testTree.delete(2505);
+
+         */
         testTree.traverse();
 
 

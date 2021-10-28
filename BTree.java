@@ -56,7 +56,7 @@ class BTree {
         if (node == null) {
             res = "error";
         } else {
-            System.out.println("comparisons " + key + ": " + comparisons[0]);
+            System.out.println("comparisons to find " + key + ": " + comparisons[0]);
             res = node.data[node.findKey(key)];
         }
 

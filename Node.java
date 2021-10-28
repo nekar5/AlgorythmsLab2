@@ -18,10 +18,10 @@ class Node {
     }
 
     public int findKey(int key) {
-        int idx = 0;
-        while (idx < num && keys[idx] < key)
-            ++idx;
-        return idx;
+        int n = 0;
+        while (n < num && keys[n] < key)
+            ++n;
+        return n;
     }
 
 
@@ -112,8 +112,6 @@ class Node {
         if (isLeaf)
             return null;
         return child[medium].search(key, comparisons);
-
-
     }
 
     public void remove(int key) {
